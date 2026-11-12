@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">VOLTO</string>
+    <string name="slogan">ஒவ்வொரு யூனிட்டையும் கண்காணிக்கவும், சாதனங்களைக் கட்டுப்படுத்தவும், மாதந்தோறும் சேமிக்கவும்.</string>
+    <string name="home">முகப்பு</string>
+    <string name="appliances">சாதனங்கள்</string>
+    <string name="limits">அளவுகள்</string>
+    <string name="budget">பட்ஜெட்</string>
+    <string name="reports">அறிக்கைகள்</string>
+    <string name="alerts">எச்சரிக்கைகள்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="live_meter">நேரலை மீட்டர்</string>
+    <string name="today">இன்று</string>
+    <string name="this_week">இந்த வாரம்</string>
+    <string name="this_month">இந்த மாதம்</string>
+    <string name="estimated_bill">மதிப்பிடப்பட்ட மாதக் கட்டணம்</string>
+    <string name="monthly_budget">மாதாந்திர பட்ஜெட்</string>
+    <string name="top_consumers">அதிக மின்சாரம் பயன்படுத்தும் சாதனங்கள்</string>
+    <string name="power_usage_24h">24-மணி நேர மின் பயன்பாடு</string>
+    <string name="add_appliance">சாதனம் சேர்க்கவும்</string>
+    <string name="switch_on">இயக்கு (ON)</string>
+    <string name="switch_off">நிறுத்து (OFF)</string>
+    <string name="critical_device">முக்கிய சாதனம்</string>
+    <string name="ask_volto">VOLTO விடம் கேட்கவும்</string>
+    <string name="login">உள்நுழைக</string>
+    <string name="register">பதிவு செய்க</string>
+    <string name="forgot_password">கடவுச்சொல் மறந்துவிட்டதா?</string>
+    <string name="logout">வெளியேறு</string>
+</resources>

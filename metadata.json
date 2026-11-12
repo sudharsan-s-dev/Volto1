@@ -1,0 +1,6 @@
+{
+  "name": "VOLTO",
+  "description": "Smart home electricity monitoring and management app for Indian households. Monitor Every Unit, Control Every Appliance, Save Every Month.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

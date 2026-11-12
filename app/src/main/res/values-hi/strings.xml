@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">VOLTO</string>
+    <string name="slogan">हर यूनिट पर नज़र रखें, हर उपकरण नियंत्रित करें, हर महीने बचत करें।</string>
+    <string name="home">होम</string>
+    <string name="appliances">उपकरण</string>
+    <string name="limits">सीमाएं</string>
+    <string name="budget">बजट</string>
+    <string name="reports">रिपोर्ट्स</string>
+    <string name="alerts">अलर्ट</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="live_meter">लाइव मीटर</string>
+    <string name="today">आज</string>
+    <string name="this_week">इस सप्ताह</string>
+    <string name="this_month">इस महीने</string>
+    <string name="estimated_bill">अनुमानित मासिक बिल</string>
+    <string name="monthly_budget">मासिक बजट</string>
+    <string name="top_consumers">सर्वाधिक बिजली खपत वाले उपकरण</string>
+    <string name="power_usage_24h">24-घंटे बिजली खपत</string>
+    <string name="add_appliance">उपकरण जोड़ें</string>
+    <string name="switch_on">चालू करें (ON)</string>
+    <string name="switch_off">बंद करें (OFF)</string>
+    <string name="critical_device">महत्वपूर्ण उपकरण</string>
+    <string name="ask_volto">VOLTO से पूछें</string>
+    <string name="login">साइन इन करें</string>
+    <string name="register">नया खाता बनाएं</string>
+    <string name="forgot_password">पासवर्ड भूल गए?</string>
+    <string name="logout">लॉग आउट</string>
+</resources>

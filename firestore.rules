@@ -1,0 +1,55 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isMember(homeId) {
+      return isAuthenticated() &&
+        exists(/databases/$(database)/documents/homes/$(homeId)) &&
+        get(/databases/$(database)/documents/homes/$(homeId)).data.members[request.auth.uid] == true;
+    }
+
+    function isBackendAdmin() {
+      return isAuthenticated() &&
+        (request.auth.token.admin == true || request.auth.token.firebase.sign_in_provider == 'service_account');
+    }
+
+    // Root Homes Collection: Members-based authorization
+    match /homes/{homeId} {
+      allow read: if isAuthenticated() && resource.data.members[request.auth.uid] == true;
+      allow create: if isAuthenticated() && request.resource.data.members[request.auth.uid] == true;
+      allow update, delete: if isMember(homeId);
+
+      // Appliances subcollection
+      match /appliances/{applianceId} {
+        allow read, write: if isMember(homeId);
+      }
+
+      // Limits configuration subcollection
+      match /limits/{limitId} {
+        allow read, write: if isMember(homeId);
+      }
+
+      // Household monthly budget subcollection
+      match /budget/{budgetId} {
+        allow read, write: if isMember(homeId);
+      }
+
+      // Hourly energy readings: Read by home members, write exclusively by trusted backend
+      match /hourly_readings/{readingId} {
+        allow read: if isMember(homeId);
+        allow write: if isBackendAdmin();
+      }
+
+      // Raw high-frequency telemetry readings: Read by home members, write exclusively by backend
+      match /telemetry/{telemetryId} {
+        allow read: if isMember(homeId);
+        allow write: if isBackendAdmin();
+      }
+    }
+  }
+}
